@@ -11,13 +11,25 @@ html {
 /* Variables */
 :root {
   --c-bg: #ffffff;
+  --c-bg-dark: #000000;
   --c-text: #000000;
+  --c-text-dark: #ffffff;
   --i-icons: #000000;
   --header: #ff7373;
   --nav: #f2ff35;
   --icons: #345a38;
   --phone: #3e95b1;
   --tablet: #37bb5d;
+  --persian-green: #1b998b;
+  --persian-green-hover: rgb(30, 173, 156);
+  --indigo-dye: #033f63ff;
+  --aero-blue: #8BF9C7;
+  --aero-blue-nav: #8bf9c74d;
+  --off-white: #ffffffdb;
+  --green: #1b998b;
+  --black: #000000;
+  --melon: #fcbfb7ff;
+  --earth-yellow: rgb(233, 216, 160);
 }
 
 
@@ -27,7 +39,6 @@ body {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  background-color: var(--c-bg);
   margin: 0;
   padding: 0;
   height: 100vh;
@@ -37,7 +48,7 @@ body {
 /* Global: Font and Letter Styles */
 #Page {
   font-family: 'Work Sans', sans-serif;
-  font-weight: 300;
+  font-weight: 200;
   font-size: 16px;
   letter-spacing: .1em;
   color: var(--c-text)
@@ -47,7 +58,6 @@ body {
 #Frame {
   height: 95vh;
   width: 97.5vw;
-  border: 1px solid gray
 }
 
 .frame {
@@ -57,10 +67,10 @@ body {
 /* Header  */
 #Header {
   display: flex;
-  /* flex-wrap: wrap; */
   justify-content: space-between;
-  min-height: 100px;
-  background-color: var(--header);
+  min-height: 10%;
+  background-color: var(--c-bg);
+  border-bottom: 1px solid black;
 }
 
 .header-icons {
@@ -68,7 +78,7 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 1em;
+  gap: 2em;
   font-size: 1.25em;
   padding-inline: 20px;
   background-color: var(--c-bg);
@@ -78,16 +88,9 @@ body {
 /* Nav */
 .header-nav {
   display: flex;
-  /* justify-content: center; */
-  /* align-items: center; */
   background-color: var(--c-bg);
   overflow: hidden;
 }
-
-/* @media screen and (max-width: 1024px) {
-  
-} */
-
 
 .header-nav > ul {
   position: relative;
@@ -96,13 +99,13 @@ body {
   align-items: center;
   margin: 0;
   padding: 0;
-  gap: clamp(1em, 50vw, 2em);
+  gap: min(1em, 5em);
   list-style: none;
   font-size: 1.5em;
 }
 
 .header-nav-li {
-  /* margin-right: 3em; */
+
 }
 
 a {
@@ -114,10 +117,15 @@ a {
   color: var(--c-text);
 }
 
+/* Buttons */
+
 #Mode-switch {
   position: relative;
   top: .025em;
   margin-right: 20px;
+  padding: 0 10px;
+  border-radius: 20px;
+  background-color: var(--c-bg);
   color: var(--c-text);
 }
 
@@ -125,45 +133,116 @@ a {
   display: none;
 }
 
+#Hamburger {
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
+  .header-icons {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.20em;
+    font-size: 1.25em;
+    padding-inline: 20px;
+    background-color: var(--c-bg);
+    color: var(--i-icons);
+  }
+  
   .header-nav > ul {
     position: fixed;
     inset: 0 0 0 50%;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    gap: 1em;
     padding: min(20vh, 1em);
-    background: hsl(0 0% 100% / 0.1);
+    background: var(--aero-blue-nav);
     backdrop-filter: blur(1em);
   }
 
   .header-nav > ul > li {
     position: relative;
+    top: 100px;
   }
   
   #Mode-switch {
     position: absolute;
+    display: flex;
     top: 0;
     right: 0;
-    font-size: 1.1em;
     margin: 24px 60px;
+    padding: 0 10px;
+    border-radius: 20px;
+    background-color: var(--c-bg);
+    color: var(--c-text);
   }
-  
+
+  #Mode-switch > * {
+    position: relative;
+    left: .1em;
+    top: .05em;
+  }
+
   #Header-nav-x {
     position: absolute;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     top: 0;
     right: 0;
-    margin: 24px 30px;
-    font-size: 1.1em;   
+    font-size: 1.05em;
+
+    margin: 24px 15px;
+    padding: 0 10px;
+    border-radius: 20px;
+    background-color: var(--c-bg);
+    color: var(--c-text);
+  }
+
+  #Header-nav-x > * {
+    position: relative;
+    left: 0em;
+    top: .05em;
   }
 }
 
-
-
-
-
 /* Body */
+
+.content {
+  min-height: 90%;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+.page {
+  
+}
+
+.page-content-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.home-name {
+  font-size: 6em;
+  font-weight: 200;
+}
+
+.period {
+  color: var(--aero-blue);
+}
+
+.home-description {
+  font-size: 1.25em;
+  margin-left: .4em;
+  margin-top: -.5em;
+}
+
 
 
 /* Media Queries */
