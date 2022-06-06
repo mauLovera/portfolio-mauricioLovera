@@ -14,8 +14,8 @@ html {
   --c-text: #ffffff;
   --header: #ff7373;
   --nav: #f2ff35;
-  --placeholder: #fff;
-  --placeholder: #fff;
+  --phone: #3e95b1;
+  --tablet: #37bb5d;
 }
 
 
@@ -55,18 +55,18 @@ body {
 /* Header  */
 #Header {
   display: flex;
-  flex-wrap: wrap;`
+  flex-wrap: wrap;
   justify-content: space-between;
   min-height: 100px;
   background-color: var(--header);
 }
 
 #Header > *:nth-child(1) {
-  flex: 1 1 30%;
+  flex: 1 1 20%;
 }
 
 #Header > *:nth-child(2) {
-  flex: 1 1 70%;
+  flex: 1 1 80%;
 }
 
 .header-icons {
@@ -80,12 +80,24 @@ body {
 }
 
 /* Nav */
-
 .header-nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   background-color: var(--nav);
+}
+
+@media screen and (max-width: 1024px) {
+  .header-nav {
+    background-color: var(--tablet); 
+    font-size: clamp(.5em, 40vw, 1em);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header-nav {
+    background-color: var(--phone);
+  }
 }
 
 .header-nav > ul {
@@ -98,6 +110,7 @@ body {
   align-items: center;
   gap: 5em;
   list-style: none;
+  font-size: 1.5em;
 }
 
 .header-nav-li {
@@ -108,8 +121,12 @@ body {
   text-decoration: none;
 }
 
+
+
 /* Body */
 
+
+/* Media Queries */
 
 
 
