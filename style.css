@@ -11,9 +11,11 @@ html {
 /* Variables */
 :root {
   --c-bg: #ffffff;
-  --c-text: #ffffff;
+  --c-text: #000000;
+  --i-icons: #000000;
   --header: #ff7373;
   --nav: #f2ff35;
+  --icons: #345a38;
   --phone: #3e95b1;
   --tablet: #37bb5d;
 }
@@ -55,71 +57,109 @@ body {
 /* Header  */
 #Header {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: space-between;
   min-height: 100px;
   background-color: var(--header);
 }
 
-#Header > *:nth-child(1) {
-  flex: 1 1 20%;
-}
-
-#Header > *:nth-child(2) {
-  flex: 1 1 80%;
-}
-
 .header-icons {
   position: relative;
-  left: 2em;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 1em;
   font-size: 1.25em;
+  padding-inline: 20px;
+  background-color: var(--c-bg);
+  color: var(--i-icons);
 }
 
 /* Nav */
 .header-nav {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  background-color: var(--nav);
+  /* justify-content: center; */
+  /* align-items: center; */
+  background-color: var(--c-bg);
+  overflow: hidden;
 }
 
-@media screen and (max-width: 1024px) {
-  .header-nav {
-    background-color: var(--tablet); 
-    font-size: clamp(.5em, 40vw, 1em);
-  }
-}
+/* @media screen and (max-width: 1024px) {
+  
+} */
 
-@media screen and (max-width: 768px) {
-  .header-nav {
-    background-color: var(--phone);
-  }
-}
 
 .header-nav > ul {
   position: relative;
-  right: 5em;
   display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0;
   padding: 0;
-  justify-content: space-evenly;
-  align-items: center;
-  gap: 5em;
+  gap: clamp(1em, 50vw, 2em);
   list-style: none;
   font-size: 1.5em;
 }
 
 .header-nav-li {
+  /* margin-right: 3em; */
+}
 
+a {
+  color: inherit;
 }
 
 .h-nav-li-links {
   text-decoration: none;
+  color: var(--c-text);
 }
+
+#Mode-switch {
+  position: relative;
+  top: .025em;
+  margin-right: 20px;
+  color: var(--c-text);
+}
+
+.header-nav-x {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .header-nav > ul {
+    position: fixed;
+    inset: 0 0 0 50%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: min(20vh, 1em);
+    background: hsl(0 0% 100% / 0.1);
+    backdrop-filter: blur(1em);
+  }
+
+  .header-nav > ul > li {
+    position: relative;
+  }
+  
+  #Mode-switch {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.1em;
+    margin: 24px 60px;
+  }
+  
+  #Header-nav-x {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    margin: 24px 30px;
+    font-size: 1.1em;   
+  }
+}
+
+
 
 
 
