@@ -1,0 +1,39 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Variables */
+:root {
+  --c-bg: #ffffff;
+  --c-text: #000000;
+  --placeholder: #fff;
+  --placeholder: #fff;
+  --placeholder: #fff;
+  --placeholder: #fff;
+}
+
+/* Global: Page Positioning and Size */
+#Page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: var(--c-bg);
+}
+
+/* Global: Font and Letter Styles */
+body {
+  font-family: monospace;
+  font-weight: 100;
+  font-size: 15px;
+  letter-spacing: .1em;
+  color: white;
+}
