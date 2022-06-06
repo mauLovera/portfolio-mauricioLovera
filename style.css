@@ -11,29 +11,105 @@ html {
 /* Variables */
 :root {
   --c-bg: #ffffff;
-  --c-text: #000000;
-  --placeholder: #fff;
-  --placeholder: #fff;
+  --c-text: #ffffff;
+  --header: #ff7373;
+  --nav: #f2ff35;
   --placeholder: #fff;
   --placeholder: #fff;
 }
 
+
 /* Global: Page Positioning and Size */
-#Page {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
   background-color: var(--c-bg);
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
 }
 
 /* Global: Font and Letter Styles */
-body {
-  font-family: monospace;
-  font-weight: 100;
-  font-size: 15px;
+#Page {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
   letter-spacing: .1em;
-  color: white;
+  color: var(--c-text)
 }
+
+/* Website Frame */
+#Frame {
+  height: 95vh;
+  width: 97.5vw;
+  border: 1px solid gray
+}
+
+.frame {
+
+}
+
+/* Header  */
+#Header {
+  display: flex;
+  flex-wrap: wrap;`
+  justify-content: space-between;
+  min-height: 100px;
+  background-color: var(--header);
+}
+
+#Header > *:nth-child(1) {
+  flex: 1 1 30%;
+}
+
+#Header > *:nth-child(2) {
+  flex: 1 1 70%;
+}
+
+.header-icons {
+  position: relative;
+  left: 2em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1em;
+  font-size: 1.25em;
+}
+
+/* Nav */
+
+.header-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: var(--nav);
+}
+
+.header-nav > ul {
+  position: relative;
+  right: 5em;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 5em;
+  list-style: none;
+}
+
+.header-nav-li {
+
+}
+
+.h-nav-li-links {
+  text-decoration: none;
+}
+
+/* Body */
+
+
+
+
