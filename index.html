@@ -27,13 +27,13 @@
       <!-- Header -->
       <header id="Header" class="header">
         <div class="header-icons">
-          <i class="fa-brands fa-github"></i>
-          <i class="fa-brands fa-linkedin-in"></i>
-          <i class="fa-solid fa-envelope"></i>
-          <i class="fa-solid fa-file-lines"></i>  
+          <a href=""><i class="fa-brands fa-github"></i></a>
+          <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href=""><i class="fa-solid fa-envelope"></i></a>
+          <a href=""><i class="fa-solid fa-file-lines"></i></a> 
         </div>
         <!-- Nav -->
-        <nav class="header-nav">
+        <nav class="header-nav hidden">
           <ul>
             <li class="header-nav-li">
               <a href="" class="h-nav-li-links">Home</a>
@@ -58,36 +58,62 @@
                 <i class="fa-solid fa-xmark"></i>
               </a>
             </li>
-            <li id="Hamburger" class="hamburger hidden">
-              <div class="hamburger-line"></div>
-              <div class="hamburger-line"></div>
-              <div class="hamburger-line"></div>
-            </li>
           </ul>
         </nav>
+        <div class="hamburger-container h-hidden">
+          <li id="Hamburger" class="hamburger">
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+          </li>
+        </div>
       </header>
       <!-- Body -->
       <main class="content">
         <!-- Home -->
-        <section class="page" data-page="home">
+        <section id="Home" class="page" data-page="home">
           <div class="page-content-home">
             <div class="home-name">Hi, I'm<br>Mauricio<span class="period">.</span></div>
             <div class="home-description">Web Developer</div>
           </div>
         </section>
+        <div id="Chatbox" class="chatbox-container">
+          <div class="chatbox">
+            <ul class="chatbox-list">
+              <li class ="auto-text">Hello!</li>
+              <li class ="auto-text">My name is Mauricio Lovera</li>
+              <li class ="auto-text">I'm a Web Developer based out of Miami, FL</li>
+              <li class ="auto-text">
+                <span class="link-text">Continue description...</span>
+              </li>
+              <li class ="auto-text">Or</li>
+              <li class ="auto-text">Search for what you're looking for!</li>
+              <li class ="auto-text">Example: Projects, Contact, GitHub, Games...</li>
+              <li class="response-text">Games</li>
+
+            </ul>
+          </div>
+          <div class="chatbox-search-container">
+            <input class="chatbox-search" placeholder="Type Something!">
+            <button class="chatbox-search-button">Enter</button>
+          </div>
+        </div>
         <!-- About -->
-        <section class="page" data-page="about">
+        <!-- <section class="page" data-page="about">
           <div class="page-content-about"></div>
-        </section>
+        </section> -->
         <!-- Projects -->
-        <section class="page" data-page="projects">
+        <!-- <section class="page" data-page="projects">
           <div class="page-content-projects"></div>
-        </section>
+        </section> -->
         <!-- Contact -->
-        <section class="page" data-page="contact">
+        <!-- <section class="page" data-page="contact">
           <div class="page-content-contact"></div>
-        </section>
+        </section> -->
       </main>
+      <footer>
+
+      </footer>
     </div>
   </div>
 </body>
