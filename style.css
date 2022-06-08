@@ -103,6 +103,10 @@ ul {
   color: var(--i-icons);
 }
 
+.header-icons > *:hover {
+  color: var(--header)
+}
+
 /* Nav */
 .header-nav {
   display: flex;
