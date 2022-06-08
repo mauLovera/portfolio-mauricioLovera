@@ -351,6 +351,7 @@ a {
 }
 
 .project-picture {
+  border: 2px solid black;
   height: 100%;
   width: 100%;
 }
@@ -452,7 +453,7 @@ a {
     align-items: center;
     top: 0;
     right: 0;
-    font-size: 1.05em;
+    font-size: 1.2em;
 
     margin: 24px 15px;
     padding: 0 10px;
@@ -467,24 +468,24 @@ a {
     top: .05em;
   }
 
+  .h-hidden {
+    display: block;
+  } 
+
+  .hidden {
+  display: none;
+  }
   
   .hamburger-container {
     z-index: 99;
   }
   
-  .hidden {
-    display: none;
-  }
-  
-  .h-hidden {
-    display: block;
-  } 
-
   .content {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1em;
+    margin-top: 200px;
   }
   
   .page-content-home {
@@ -492,11 +493,49 @@ a {
   }
 
   #Chatbox {
-    display: none !important;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
   }
+
+  .chatbox {
+    align-items: center;
+  }
+
+  .chatbox-list {
+    align-items: center;
+    width: 80%
+  }
+
+  .chatbox-list > li {
+    text-align: center;
+    width: 100%;
+  }
+
 
   .home-name {
     font-size: 5em;
   }
   
+  #Chatbox-projects {
+    width: 90%;
+  }
+  #Projects {
+    margin-top: 50px;
+  }
+
+  .chatbox-projects-list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .projects {
+    font-size: 3em;
+  }
+
+  .chatbox-projects-list > .project {
+    text-align: center;
+    height: 100%;
+    width: 100%;
 }

@@ -6,6 +6,7 @@
 
 const hamBtn = document.getElementById('Hamburger')
 const xBtn = document.getElementById('Header-nav-x')
+const nav = document.getElementById('Nav')
 
 // Event Listeners
 
@@ -16,9 +17,10 @@ xBtn.addEventListener(`click`, closeNavBar)
 // Functions
 
 function openNavBar() {
-  
+  console.log('hello')
+  nav.classList.toggle('hidden')
 }
 
 function closeNavBar() {
-  
+  nav.classList.toggle('hidden')
 }
